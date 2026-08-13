@@ -63,28 +63,6 @@
       color: var(--orange);
     }
 
-    .act-now-badge {
-      position: absolute;
-      top: -18px;
-      right: -28px;
-      width: 72px;
-      height: 72px;
-      background: var(--red);
-      color: var(--white);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 0.65rem;
-      font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: 0.04em;
-      text-align: center;
-      line-height: 1.2;
-      transform: rotate(-10deg);
-      box-shadow: 0 4px 14px rgba(0,0,0,0.35);
-    }
-
     .hero h2 {
       margin-top: 16px;
       font-size: clamp(1.2rem, 4vw, 1.8rem);
@@ -135,6 +113,20 @@
       margin-bottom: 32px;
     }
 
+    .petition-btn-group {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+    }
+
+    @media (min-width: 540px) {
+      .petition-btn-group {
+        flex-direction: row;
+        justify-content: center;
+      }
+    }
+
     .petition-btn {
       display: inline-block;
       background: var(--orange);
@@ -153,6 +145,27 @@
       transform: translateY(-2px);
       box-shadow: 0 10px 30px rgba(0,0,0,0.35);
       outline: 3px solid rgba(255,255,255,0.6);
+      outline-offset: 3px;
+    }
+
+    .petition-btn-secondary {
+      display: inline-block;
+      background: transparent;
+      color: var(--white);
+      font-size: 1rem;
+      font-weight: 700;
+      padding: 16px 36px;
+      border-radius: 60px;
+      border: 2px solid rgba(255,255,255,0.55);
+      letter-spacing: 0.02em;
+      transition: border-color 0.15s, background 0.15s;
+    }
+
+    .petition-btn-secondary:hover,
+    .petition-btn-secondary:focus-visible {
+      border-color: rgba(255,255,255,0.9);
+      background: rgba(255,255,255,0.08);
+      outline: 3px solid rgba(255,255,255,0.4);
       outline-offset: 3px;
     }
 
@@ -305,14 +318,6 @@
 
     /* ── RESPONSIVE ────────────────────────────── */
     @media (max-width: 480px) {
-      .act-now-badge {
-        width: 60px;
-        height: 60px;
-        font-size: 0.58rem;
-        top: -14px;
-        right: -18px;
-      }
-
       .petition-btn {
         padding: 18px 36px;
         font-size: 1.05rem;
@@ -336,7 +341,6 @@
   <header class="hero">
     <div class="hero-inner">
       <h1>NO <span>TEA</span><br>TAKEOVER</h1>
-      <div class="act-now-badge" aria-hidden="true">Act<br>Now!</div>
     </div>
     <h2>Austin Kids Need You!</h2>
   </header>
@@ -344,16 +348,26 @@
   <!-- ── PETITION ──────────────────────────────── -->
   <section class="petition-section" aria-labelledby="petition-heading">
     <div class="section">
-      <p class="section-label">Take Action</p>
-      <h2 id="petition-heading">Your Voice Matters — Sign Today</h2>
-      <a
-        class="petition-btn"
-        href="https://docs.google.com/forms/d/e/1FAIpQLSeawINA7OiTnJeyrI2n_aFZG7hAT1F8sKKRKeO0pl7bjBRA7g/viewform"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Sign the Petition →
-      </a>
+      <p class="section-label">Join KASI</p>
+      <h2 id="petition-heading">Keep Austin Schools Independent</h2>
+      <div class="petition-btn-group">
+        <a
+          class="petition-btn"
+          href="https://joinkasi.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Visit joinkasi.org
+        </a>
+        <a
+          class="petition-btn-secondary"
+          href="https://joinkasi.org/#petition"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Sign the Petition
+        </a>
+      </div>
     </div>
   </section>
 
@@ -366,8 +380,62 @@
 
         <!-- ORG CARD — duplicate this block to add a new organization -->
         <div class="org-card">
-          <p class="org-card-name">Stop Austin Takeover</p>
-          <a class="org-card-link" href="http://stopaustintakeover.org" target="_blank" rel="noopener noreferrer">
+          <p class="org-card-name">ATX116</p>
+          <a class="org-card-link" href="https://www.atx116.org" target="_blank" rel="noopener noreferrer">
+            Visit →
+          </a>
+        </div>
+        <!-- END ORG CARD -->
+
+        <!-- ORG CARD — duplicate this block to add a new organization -->
+        <div class="org-card">
+          <p class="org-card-name">Fine Arts Build Human Skills</p>
+          <a class="org-card-link" href="https://www.parentsforartseducation.org" target="_blank" rel="noopener noreferrer">
+            Visit →
+          </a>
+        </div>
+        <!-- END ORG CARD -->
+
+        <!-- ORG CARD — duplicate this block to add a new organization -->
+        <div class="org-card">
+          <p class="org-card-name">Grandparents for Public Schools</p>
+          <a class="org-card-link" href="https://grandparentsforpublicschools.org" target="_blank" rel="noopener noreferrer">
+            Visit →
+          </a>
+        </div>
+        <!-- END ORG CARD -->
+
+        <!-- ORG CARD — duplicate this block to add a new organization -->
+        <div class="org-card">
+          <p class="org-card-name">Education Austin</p>
+          <a class="org-card-link" href="https://www.educationaustin.org/" target="_blank" rel="noopener noreferrer">
+            Visit →
+          </a>
+        </div>
+        <!-- END ORG CARD -->
+
+        <!-- ORG CARD — duplicate this block to add a new organization -->
+        <div class="org-card">
+          <p class="org-card-name">Our Schools Our Democracy</p>
+          <a class="org-card-link" href="https://osod.org/" target="_blank" rel="noopener noreferrer">
+            Visit →
+          </a>
+        </div>
+        <!-- END ORG CARD -->
+
+        <!-- ORG CARD — duplicate this block to add a new organization -->
+        <div class="org-card">
+          <p class="org-card-name">Raise Your Hand Texas</p>
+          <a class="org-card-link" href="https://www.raiseyourhandtexas.org" target="_blank" rel="noopener noreferrer">
+            Visit →
+          </a>
+        </div>
+        <!-- END ORG CARD -->
+
+        <!-- ORG CARD — duplicate this block to add a new organization -->
+        <div class="org-card">
+          <p class="org-card-name">Texas AFT</p>
+          <a class="org-card-link" href="https://www.texasaft.org" target="_blank" rel="noopener noreferrer">
             Visit →
           </a>
         </div>
@@ -445,6 +513,36 @@
           <div>
             <p class="article-title">Texas School Takeover Tracker</p>
             <p class="article-source">The Dallas Morning News</p>
+          </div>
+          <span class="article-arrow" aria-hidden="true">→</span>
+        </a>
+        <!-- END ARTICLE -->
+
+        <!-- ARTICLE — duplicate this block to add a new article -->
+        <a
+          class="article-card"
+          href="https://www.austinchronicle.com/news/education/article/what-could-state-takeover-mean-for-austin-ask-fort-worth-isd/?npnl=NDY0OTI3fDJmMjYyZGVlOGVmZDkxYTU2Njg5ODhiNDhkMWI5MzA1ZTk4NDdiZmFhYzBiNTNhNGE0MDcxODYxYjQ0ZTgwYzM&mc_cid=ce4b519327"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <div>
+            <p class="article-title">What Could State Takeover Mean for Austin</p>
+            <p class="article-source">Austin Chronicle</p>
+          </div>
+          <span class="article-arrow" aria-hidden="true">→</span>
+        </a>
+        <!-- END ARTICLE -->
+
+        <!-- ARTICLE — duplicate this block to add a new article -->
+        <a
+          class="article-card"
+          href="https://www.texasmonthly.com/news-politics/public-school-district-takeover/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <div>
+            <p class="article-title">Why Is Texas Taking Over So Many School Districts</p>
+            <p class="article-source">Texas Monthly</p>
           </div>
           <span class="article-arrow" aria-hidden="true">→</span>
         </a>
